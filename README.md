@@ -1,19 +1,4 @@
 # hello-world
-testar
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
