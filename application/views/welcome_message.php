@@ -63,53 +63,52 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
 	<!-- rectangulos -->
-		<div>
+		
 		  <div class="form-group">
-            <label class="form-group-label">
-              <input class="form-group-input" type="checkbox" value="">
-              Option 1
-            </label>
-          </div>
+        <label class="form-group-label">
+          <input class="form-group-input" type="checkbox" value="">
+          Option 1
+        </label>
+      </div>
 
-          <div class="form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" value="" checked="">
-              Option one is this and that—be sure to include why it's great
-            </label>
-          </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="" checked="">
+          Option one is this and that—be sure to include why it's great
+        </label>
+      </div>
 
-          <div class="form-check disabled">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" value="" disabled="">
-              Option two is disabled
-            </label>
-          </div>
-		</div>
+      <div class="form-check disabled">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="" disabled="">
+          Option two is disabled
+        </label>
+      </div>
+	 
 
         <!-- bolas -->
-        <div>  
+        
 		  <div class="form-check">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-              Option one is this and that—be sure to include why it's great
-            </label>
-          </div>
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+          Option one is this and that—be sure to include why it's great
+        </label>
+      </div>
 
-          <div class="form-check">
-          <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-              Option two can be something else and selecting it will deselect option one
-           </label>
-          </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+          Option two can be something else and selecting it will deselect option one
+        </label>
+      </div>
 
-          <div class="form-check disabled">
-          <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
-              Option three is disabled
-            </label>
-          </div>
-		</div>
-
+      <div class="form-check disabled">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
+          Option three is disabled
+        </label>
+      </div>
+      
         <!-- <div class="form-group">
           <label for="exampleSelect2">Example multiple select</label>
           <select multiple="" class="form-control" id="exampleSelect2">
@@ -143,16 +142,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	$(':enabled').css('border','3px solid red');
   $(':disabled').css('border','3px solid green'); //disabled="disabled" inline
 </script> -->
-<script>
+
+<!-- <script> //not working in checkbox and 
   $(':input').focus(function () {
     $(this).css('border','3px solid red');
   });
 
-  // $(':input').blur(function () {
-  //   $(this).css('border','3px solid red');
-  // });
-  bla bla
-</script>
+  $(':input').blur(function () {
+    $(this).css('border','3px solid red');
+  });
+</script> -->
 
 </body>
 </html>
