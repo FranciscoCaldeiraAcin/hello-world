@@ -32,12 +32,18 @@ $(document).ready(function(){
                 required: true,
             },
         },
-        submitHandler: function(form) { //form válido,faz algo e depois é preciso o .submit
-            alert('....');
-        },
-        invalidHandler: function(event, validator) { //form inválido, faz algo 
-            alert('nr:'+ validator.numberOfInvalids());
-        },
+        //submitHandler: function(form) { //form válido,faz algo e depois é preciso o .submit
+        //    alert('....');
+        //},
+        //invalidHandler: function(event, validator) { //form inválido, faz algo 
+        //    alert('nr:'+ validator.numberOfInvalids());
+        //},
+          //highlight: function(element, errorClass) {
+          //    $(element).closest('.form-control').addClass('has-danger'); // bootstrap <= v4.0 (has-error) |  bootstrap >= v4.1 (has-danger) 
+          //},
+          //unhighlight: function(element, errorClass) {
+          //    $(element).closest('.form-group').removeClass('has-danger');
+          //}
 
       });
 
