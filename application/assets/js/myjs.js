@@ -20,9 +20,9 @@ $(document).ready(function(){
             //NAME do input no html
             fullname: {
               required: true,
-              minlength: 3,
-              maxlength: 10,
-              meow: true, //regra nova, escrita em método
+              //minlength: 3,
+              //maxlength: 10,
+              //meow: true, //regra nova, escrita em método
             },
             // email: {
             //     required: true,
@@ -31,7 +31,13 @@ $(document).ready(function(){
             password: {
                 required: true,
             },
-        }
+        },
+        submitHandler: function(form) { //form válido,faz algo e depois é preciso o .submit
+            alert('....');
+        },
+        invalidHandler: function(event, validator) { //form inválido, faz algo 
+            alert('nr:'+ validator.numberOfInvalids());
+        },
 
       });
 
