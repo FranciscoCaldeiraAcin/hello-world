@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<div class="form-group">
           <label for="fullname">Name</label>
-          <input type="text" id="fullname" name="fullname" class="form-control">
+          <input type="text" id="fullname" name="fullname" class="form-control" value="val">
         </div>
 
         <!-- <div class="form-group">
@@ -150,6 +150,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   $(':input').blur(function () {
     $(this).css('border','3px solid red');
+  });
+</script> -->
+
+<!-- <script>
+  $(':input').change(function () {
+    $(this).css('border', '3px solid red');
+  });
+  
+  $(':text').val('foo');
+
+  $(':text').val(function (index, original) {   //value="val"
+    return original+' foo';
   });
 </script> -->
 
