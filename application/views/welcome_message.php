@@ -7,7 +7,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title>Welcome to CodeIgniter</title>
 	<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.2.1/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-62+JPIF7fVYAPS4itRiqKa7VU321chxfKZRtkSY0tGoTwcUItAFEH/HGTpvDH6e6" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-	<style>
+	<script type='text/javascript' language="javascript" src="<?php echo base_url(); ?>application/assets/js/myjs.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+  <style>
 		body{
 			margin:30px;
 		}
@@ -27,12 +30,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<div class="form-group">
           <label for="fullname">Name</label>
-          <input type="text" id="fullname" name="fullname" class="form-control" value="val">
+          <input type="text" id="fullname" name="fullname" class="form-control">
         </div>
 
         <!-- <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
         </div> -->
 
         <div class="form-group">
@@ -123,7 +126,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <button type="submit" class="btn btn-primary">Submit</button>
 
 </form>
-
+<!-- AULA3 -->
 <!-- <script>
 	$(':text').css('border','3px solid red');
 	$(':password').css('border','3px solid black');
