@@ -165,7 +165,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   });
 </script> -->
 
-<script> //to serializa it needs a name!! 
+<!-- <script> //to serializa it needs a name!! 
   //cant put a name on file to serialize
   alert($('form').serialize());
 
@@ -173,7 +173,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   $.each(a, function(i, field){
     console.log(field.name + ', ' + field.value); //see on f12 console
   })
-</script>
+</script> -->
+
+<!-- <script>
+  $('form').submit(function(event){
+    alert(1);
+    event.preventDefault(); //the url don't have more name=val&pass=&textarea=
+  });
+</script> -->
 
 </body>
 </html>
