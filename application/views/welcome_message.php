@@ -37,23 +37,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" >
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
         </div> 
 
 		<div class="form-group">
           <label for="exampleTextarea">Example textarea</label>
-          <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+          <textarea class="form-control" id="exampleTextarea" rows="3" name="textarea"></textarea>
         </div>
 
-		<div class="form-group">
+		<div class="form-group"> 
           <label for="exampleInputFile">File input</label>
           <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
           <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-        </div>
+    </div>
 
         <div class="form-group">
           <label for="exampleSelect1">Example select</label>
-          <select class="form-control" id="exampleSelect1">
+          <select class="form-control" id="exampleSelect1" name="optionsSelect">
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -64,48 +64,48 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<!-- rectangulos -->
 		
-		  <div class="form-group">
-        <label class="form-group-label">
-          <input class="form-group-input" type="checkbox" value="">
+		  <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-group-input" type="checkbox" name="optionsCheckbox" value="1">
           Option 1
         </label>
       </div>
 
       <div class="form-check">
         <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" value="" checked="">
-          Option one is this and that—be sure to include why it's great
+          <input class="form-check-input" type="checkbox" name="optionsCheckbox" value="2" checked="">
+          Option 2
         </label>
       </div>
 
       <div class="form-check disabled">
         <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" value="" disabled="">
-          Option two is disabled
+          <input class="form-check-input" type="checkbox" name="optionsCheckbox" value="3" disabled="">
+          Option 3
         </label>
       </div>
 	 
-
+      <br>
         <!-- bolas -->
         
 		  <div class="form-check">
         <label class="form-check-label">
           <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-          Option one is this and that—be sure to include why it's great
+          Option one 
         </label>
       </div>
 
       <div class="form-check">
         <label class="form-check-label">
           <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-          Option two can be something else and selecting it will deselect option one
+          Option two 
         </label>
       </div>
 
       <div class="form-check disabled">
         <label class="form-check-label">
           <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
-          Option three is disabled
+          Option three 
         </label>
       </div>
       
@@ -164,6 +164,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     return original+' foo';
   });
 </script> -->
+
+<script> //to serializa it needs a name!! 
+  //cant put a name on file to serialize
+  alert($('form').serialize());
+
+  var a = $('form').serializeArray();
+  $.each(a, function(i, field){
+    console.log(field.name + ', ' + field.value); //see on f12 console
+  })
+</script>
 
 </body>
 </html>
