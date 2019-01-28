@@ -11,9 +11,9 @@ $(document).ready(function(){
 //https://jqueryvalidation.org/   >documentation
 
     //método criado para regra(rule)
-    $.validator.addMethod("meow", function(value, element) {
-        return /^A/.test( value );
-    }, 'Please enter a A in the beginning.');
+    // $.validator.addMethod("meow", function(value, element) {
+    //     return /^A/.test( value );
+    // }, 'Please enter a A in the beginning.');
 
     $('form').validate({
         rules: {
@@ -31,6 +31,14 @@ $(document).ready(function(){
             password: {
                 required: true,
             },
+            optionsCheckbox1:{
+                required: true,
+            }
+        },
+        messages:{
+            optionsCheckbox1:{
+                required: "Vá faz check ao campo",
+            }
         },
         //submitHandler: function(form) { //form válido,faz algo e depois é preciso o .submit
         //    alert('....');
@@ -38,12 +46,22 @@ $(document).ready(function(){
         //invalidHandler: function(event, validator) { //form inválido, faz algo 
         //    alert('nr:'+ validator.numberOfInvalids());
         //},
-          //highlight: function(element, errorClass) {
-          //    $(element).closest('.form-control').addClass('has-danger'); // bootstrap <= v4.0 (has-error) |  bootstrap >= v4.1 (has-danger) 
-          //},
-          //unhighlight: function(element, errorClass) {
-          //    $(element).closest('.form-group').removeClass('has-danger');
-          //}
+        //highlight: function(element, errorClass) {
+        //    $(element).closest('.form-control').addClass('has-danger'); // bootstrap <= v4.0 (has-error) |  bootstrap >= v4.1 (has-danger) 
+        //},
+        //unhighlight: function(element, errorClass) {
+        //    $(element).closest('.form-group').removeClass('has-danger');
+        //},
+        //errorPlacement: function(error, element) {
+        //  error.appendTo(element.parent());  //div criada para aparecer erro ao lado e não em baixo (aula anterior)
+        //},
+        errorPlacement: function(error, element) {
+            if (element.attr('type') == 'checkbox') {
+                element.closest('.form-check-label').children(0).prepend(error);
+            }else{
+                error.insertAfter(element.parent());
+            }
+        }
 
       });
 

@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <form>
-      
+      <!-- https://app.pluralsight.com/player?course=jquery-forms-bootstrap3&author=mark-zamoyta&name=forms-m4-validation&clip=6 -->
 	<div class="form-group">
     <label for="fullname">Name</label>
     <input type="text" id="fullname" name="fullname" class="form-control">
@@ -55,22 +55,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </select>
   </div>
 
-	<!-- rectangulos -->
+	<!-- rectangulos name!= e value != -->
 	<div class="form-check">
     <label class="form-check-label">
-      <input class="form-check-input" type="checkbox" name="optionsCheckbox" value="1">
+      <input class="form-check-input" type="checkbox" name="optionsCheckbox1" value="1">
       Option 1
     </label>
   </div>
   <div class="form-check">
     <label class="form-check-label">
-      <input class="form-check-input" type="checkbox" name="optionsCheckbox" value="2" checked="">
+      <input class="form-check-input" type="checkbox" name="optionsCheckbox2" value="2">
       Option 2
     </label>
   </div>
   <div class="form-check disabled">
     <label class="form-check-label">
-      <input class="form-check-input" type="checkbox" name="optionsCheckbox" value="3" disabled="">
+      <input class="form-check-input" type="checkbox" name="optionsCheckbox3" value="3">
       Option 3
     </label>
   </div>
@@ -80,21 +80,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <!-- bolas --> 
 	<div class="form-check">
     <label class="form-check-label">
-      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+      <input type="radio" class="form-check-input" name="optionsRadios1" id="optionsRadios1" value="option1">
       Option one 
     </label>
+    <div class="col-sm-2">
+      <!-- colocado o erro aqui por via JS -->
+    </div>
   </div>
 
   <div class="form-check">
     <label class="form-check-label">
-      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+      <input type="radio" class="form-check-input" name="optionsRadios2" id="optionsRadios2" value="option2">
       Option two 
     </label>
   </div>
 
   <div class="form-check disabled">
     <label class="form-check-label">
-      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
+      <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios3" value="option3">
       Option three 
     </label>
   </div>
