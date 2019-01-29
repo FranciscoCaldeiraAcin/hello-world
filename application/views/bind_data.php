@@ -11,27 +11,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>application/assets/css/mycss.css">
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script type='text/javascript' src="<?php echo base_url(); ?>application/assets/js/knockout-3.4.2.js"></script> <!-- Knockout.js library-->
   <script type='text/javascript' language="javascript" src="<?php echo base_url(); ?>application/assets/js/myjs5.js"></script>
+  
 
 </head>
 <body>
 
-<form id="person-form" class="form-horizontal">
-  <!-- para o for do label, ter = o id e o name -->
-  <div class="form-group">
-    <label for="fullname" class="col-sm-3">Name</label>
-    <input type="text" class="form-control col-sm-3" id="fullname"  name="fullname" placeholder="name">
-  </div>
-  
-  <div class="form-group">
-    <label for="age" class="col-sm-3">Age</label>
-    <input type="text" class="form-control col-sm-3" id="age" name="age" placeholder="Age">
-  </div>
+  <form id="person-form" class="form-horizontal">
+    <!-- para o for do label, ter = o id e o name -->
+    <div class="form-group">
+      <label for="fullname" class="col-sm-3">Name</label>
+      <input type="text" class="form-control col-sm-3" id="fullname"  name="fullname" placeholder="name" data-bind="value: fullname">
+    </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="form-group">
+      <label for="age" class="col-sm-3">Age</label>
+      <input type="text" class="form-control col-sm-3" id="age" name="age" placeholder="Age" data-bind="value: age">
+    </div>
 
-</form>
+    <button type="submit" class="btn btn-primary">Submit</button>
 
+  </form>
 
 </body>
 </html>
