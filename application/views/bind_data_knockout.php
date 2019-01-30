@@ -12,12 +12,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script type='text/javascript' src="<?php echo base_url(); ?>application/assets/js/knockout-3.4.2.js"></script> <!-- Knockout.js library-->
-  <script type='text/javascript' language="javascript" src="<?php echo base_url(); ?>application/assets/js/myjs5.js"></script>
+  <script type='text/javascript' language="javascript" src="<?php echo base_url(); ?>application/assets/js/myjsknockout.js"></script>
   
 
 </head>
 <body>
-
+  <p>ksj para knockout e ajs para angular </p>
   <form id="person-form" class="form-horizontal">
     <!-- para o for do label, ter = o id e o name -->
     <div class="form-group">
